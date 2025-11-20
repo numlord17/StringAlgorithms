@@ -89,8 +89,16 @@ public class StringAlgorithms {
      * character exists, return a space ' '.
      */
     public static char firstUniqueChar(String word) {
-        
+        for (int i = 0; i < word.length(); i++)
+        {
+            String cutWord = word.substring(0,i) + word.substring(i+1);
+            if (cutWord.indexOf(word.charAt(i)) == -1)
+            {
+               return word.charAt(i);
+            }
+        }
         return ' ';
+        
     }
 
 
@@ -115,7 +123,6 @@ public class StringAlgorithms {
         System.out.println(detectPalindrome("racecar"));
 
         System.out.println("\nTesting firstUniqueChar:");
-        // Example:
-        // System.out.println(firstUniqueChar("swiss"));
+        System.out.println(firstUniqueChar("swiss"));
     }
 }
