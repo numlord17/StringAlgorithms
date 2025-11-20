@@ -69,7 +69,15 @@ public class StringAlgorithms {
      * if the word is a palindrome (ignoring case), false otherwise.
      */
     public static boolean detectPalindrome(String word) {
-        // TODO: Implement this method
+        String wordReverse = "";
+        for (int i = word.length(); i > 0; i--)
+        {
+            wordReverse += word.substring(i-1,i);
+        }
+        if (wordReverse.equals(word))
+        {
+         return true;
+        }
         return false;
     }
 
@@ -81,7 +89,7 @@ public class StringAlgorithms {
      * character exists, return a space ' '.
      */
     public static char firstUniqueChar(String word) {
-        // TODO: Implement this method
+        
         return ' ';
     }
 
@@ -104,8 +112,7 @@ public class StringAlgorithms {
         System.out.println(capitalizeString("the quick brown fox"));
 
         System.out.println("\nTesting detectPalindrome:");
-        // Example:
-        // System.out.println(detectPalindrome("racecar"));
+        System.out.println(detectPalindrome("racecar"));
 
         System.out.println("\nTesting firstUniqueChar:");
         // Example:
