@@ -74,7 +74,7 @@ public class StringAlgorithms {
         {
             wordReverse += word.substring(i-1,i);
         }
-        if (wordReverse.equals(word))
+        if (wordReverse.toLowerCase().equals(word.toLowerCase()))
         {
          return true;
         }
@@ -120,7 +120,7 @@ public class StringAlgorithms {
         System.out.println(capitalizeString("the quick brown fox"));
 
         System.out.println("\nTesting detectPalindrome:");
-        System.out.println(detectPalindrome("racecar"));
+        System.out.println(detectPalindrome("RaceCar"));
 
         System.out.println("\nTesting firstUniqueChar:");
         System.out.println(firstUniqueChar("swiss"));
